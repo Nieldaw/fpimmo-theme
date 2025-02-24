@@ -1,0 +1,17 @@
+.single-bien{
+    background-color: #ffffff88;
+}
+.single-bien{ 
+
+    .img{
+    /* background-image: url().single-bien; */
+    background-position: center center;
+    min-height: 200px;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+
+    }
+    .item{
+        color : red;
+    }
+}
