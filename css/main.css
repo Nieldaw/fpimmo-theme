@@ -1,17 +1,68 @@
 .single-bien{
-    background-color: #ffffff88;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+
 }
-.single-bien{ 
+.single-bien .gallery{
+    display: flex;
+    gap: 40px;
+    flex: 1;
+}
+.single-bien .img{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .img{
-    /* background-image: url().single-bien; */
     background-position: center center;
-    min-height: 200px;
     background-repeat: no-repeat;
-    padding-top: 50px;
+    background-size: cover;
+}
+.single-bien .gallery .mainImg{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.single-bien .gallery .mainImg .img{
+    flex: 1;
 
-    }
-    .item{
-        color : red;
-    }
+}
+.single-bien .gallery .imgs{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+}
+.single-bien .gallery .imgs .img{
+    aspect-ratio: 16/9;
+}
+
+.single-bien .content {
+    flex: 1;
+    display: flex;
+    gap: 40px;
+
+}
+.single-bien .content .infos {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.single-bien .content .infos .title {
+
+}
+.single-bien .content .infos .description {
+
+}
+
+.single-bien .content .contact {
+    flex: 2;
+    display: flex;
 }
