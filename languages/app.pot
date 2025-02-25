@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-02-25 18:25+0000\n"
+"POT-Creation-Date: 2025-02-25 19:35+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -14,3 +14,62 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: shortcodes/bien-grid/content.php:12
+msgid "Recherche"
+msgstr ""
+
+#: shortcodes/bien-grid/content.php:16
+msgid "Toutes les types"
+msgstr ""
+
+#: shortcodes/bien-grid/content.php:17
+msgid "Evénement"
+msgstr ""
+
+#: shortcodes/bien-grid/content.php:18
+msgid "Formation"
+msgstr ""
+
+#: shortcodes/bien-grid/content.php:54
+msgid "Aucun résultat"
+msgstr ""
+
+#: shortcodes/bien-grid/content.php:54
+msgid "Aucun object pour le moment"
+msgstr ""
+
+#: shortcodes/bien-grid/structure.php:19
+msgid "Toutes"
+msgstr ""
+
+#: shortcodes/bien-grid/structure.php:24
+msgid "Aucune"
+msgstr ""
+
+#: shortcodes/bien-grid/structure.php:37
+msgid "Types"
+msgstr ""
+
+#: shortcodes/bien-grid/structure.php:44
+msgid "Exclude type"
+msgstr ""
+
+#: shortcodes/bien-grid/structure.php:51
+msgid "Max"
+msgstr ""
+
+#: shortcodes/bien-grid/structure.php:59
+msgid "Item by row"
+msgstr ""
+
+#: shortcodes/bien-grid/structure.php:66
+msgid "Enable search ?"
+msgstr ""
+
+#: shortcodes/bien-grid/structure.php:73
+msgid "By text"
+msgstr ""
+
+#: shortcodes/bien-grid/structure.php:84
+msgid "By type"
+msgstr ""

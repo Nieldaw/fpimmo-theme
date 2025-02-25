@@ -1,0 +1,122 @@
+.bien-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .search {
+    display: flex;
+    gap: 20px;
+
+    input {
+      height: 43px;
+      background-color: white;
+      border: 0px solid transparent;
+      border-radius: 5px;
+      padding: 0px 15px 0px 15px;
+      font-size: 15px;
+    }
+    select {
+      width: min-content;
+      background-color: white;
+      border-radius: 5px;
+    }
+    @media screen and (max-width: 999px) {
+      flex-direction: column;
+      select {
+        width: 100%;
+      }
+    }
+  }
+  .wrapper {
+    display: grid;
+    gap: 30px;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+
+      .img {
+        aspect-ratio: 16/9;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 20px;
+
+        .organizers {
+          display: flex;
+          gap: 10px;
+
+          .organizer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 15px 0px 15px;
+            background-color: #039f7f;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+          }
+        }
+      }
+      .content {
+        padding: 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        .date {
+          text-align: center;
+          color: #039f7f;
+          font-size: 14px;
+        }
+        .title {
+          text-align: center;
+          font-size: 20px;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: #000;
+        }
+        .description {
+          text-align: center;
+          color: #000;
+          padding: 20px 0px 20px 0px;
+        }
+
+        .categories {
+          display: flex;
+          gap: 10px;
+
+          .category {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 15px 0px 15px;
+            background-color: #039f7f;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+          }
+        }
+      }
+      &:hover {
+      }
+    }
+
+    @media screen and (max-width: 999px) {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 1fr !important;
+    }
+  }
+  .empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    color: white;
+    font-size: 24px;
+  }
+}
