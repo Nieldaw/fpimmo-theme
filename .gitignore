@@ -5,6 +5,7 @@
 
 
 dist/
+languages/
 # User-specific files
 *.rsuser
 *.suo
