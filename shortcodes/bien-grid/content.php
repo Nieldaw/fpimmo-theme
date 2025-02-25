@@ -6,7 +6,10 @@ defined('WPINC') || wp_die();
 
 ?>
 <div class="bien-grid">
+
+    
     <?php if ($atts["bien-grid_enable_search"] == 'true'): ?>
+        <!--
         <div class="search">
             <?php if ($atts["bien-grid_enable_search_text"] == 'true'): ?>
                 <input id="searchText" placeholder="<?= __('Recherche', 'app') ?>" />
@@ -20,16 +23,40 @@ defined('WPINC') || wp_die();
                 </select>
             <?php endif; ?>
         </div>
+            -->
     <?php endif; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="wrapper" style="grid-template-columns: repeat(<?= $atts["bien-grid_item_by_row"] ?>, 1fr);">
         <?php foreach ($items as $itemId):
             $itemTerms = get_the_terms($itemId, 'bien-type');
+
+            
             $itemTermsString = ";";
             foreach ($itemTerms as $term) {
                 $itemTermsString .= $term->term_id . ';';
             }
             ?>
-            <a class="item" href="<?= get_the_permalink($itemId); ?>" data-title="<?= strtolower(get_the_title($itemId)) ?>" data-type="<?= get_field('bien_type', $itemId) ?>">
+            <a class="item" href="<?= get_the_permalink($itemId); ?>" data-title="<?= strtolower(get_the_title($itemId)) ?>" data-type="<?= $itemTermsString ?>">
                 <div class="img" style="background-image: url('<?= get_the_post_thumbnail_url($itemId) ?>')">
 
                 </div>
@@ -49,8 +76,24 @@ defined('WPINC') || wp_die();
             </a>
         <?php endforeach; ?>
     </div>
-    <div class="empty" style="<?= count($items) > 0 ? 'display:none' : '' ?>">
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="empty" style="<?= count($items) > 0 ? 'display:none' : '' ?>">
         <?= count($items) > 0 ? __('Aucun résultat', 'app') : __('Aucun object pour le moment', 'app') ?>
     </div>
 </div>

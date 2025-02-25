@@ -40,6 +40,7 @@ $terms = get_terms('bien-type', $post_id);
             </div>
             <div class="composants">
                 <div class="propriete">
+                    
                     <div class="prop1">
                         <?= $fields['pieces'] ?> pièces
                     </div>
