@@ -2,9 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding-top: 80px;
-    padding-bottom: 80px;
-
+    padding: 80px 30px;
 
 }
 .single-bien .gallery{
@@ -53,10 +51,38 @@
     flex: 3;
     display: flex;
     flex-direction: column;
+    gap: 20px;
+}
+.single-bien .content .infos .bien-types {
+    display: flex;
+}
+.single-bien .content .infos .bien-types .feature {
+    color: red;
+    font-weight: bold;  
+}
+.single-bien .content .infos .ville {
+    font-weight: bold;
+    font-size: 50px;
+}
+.single-bien .content .infos .composants{
+    flex: 1;
+    display: flex;
     gap: 40px;
 }
-.single-bien .content .infos .title {
-
+.single-bien .content .infos .composants .propriete{
+    flex: 4;
+    display: flex;
+    justify-content: space-between;
+}
+.single-bien .content .infos .composants .price{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+}
+.single-bien .content .infos .title .body h1{
+    font-weight: normal;
+    font-size: 30px;
 }
 .single-bien .content .infos .description {
 
@@ -66,3 +92,4 @@
     flex: 2;
     display: flex;
 }
+

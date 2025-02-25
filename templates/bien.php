@@ -16,33 +16,61 @@ $terms = get_terms('bien-type', $post_id);
         </div>
         <div class="imgs">
             <div class="img" style="background-image: url('<?= get_field('image_1', $post_id)['url']; ?>');">a</div>
-            <div class="img" style="background-image: url('<?= get_the_post_thumbnail_url($post_id); ?>');">a</div>
+            <div class="img" style="background-image: url('<?= get_field('image_2', $post_id)['url']; ?>');">a</div>
         </div>
     </div>
     <div class="content">
         <div class="infos">
+            <div class="bien-types">
+                <?php foreach(get_the_terms($post_id, 'bien-type') as $feature): ?>
+                    <div class="feature">
+                        <?= $feature->name ?>
+                    </div>
+
+                <?php endforeach; ?>
+            </div>
+            <div class="ville">
+                <?= $fields['city'] ?>
+            </div>
             <div class="title">
-                <h1><?= get_the_title($post_id); ?></h1>
+                <h3><?= get_the_title($post_id); ?></h3>
                 <div class="description">
                     <?= get_the_content($post_id); ?>
                 </div>
             </div>
+            <div class="composants">
+                <div class="propriete">
+                    <div class="prop1">
+                        <?= $fields['pieces'] ?> pièces
+                    </div>
+                    <div class="prop2">
+                        <?= $fields['chambres'] ?> chambre
+                    </div>
+                    <div class="prop3">
+                        <?= $fields['surface'] ?> m2
+                    </div>  
+                </div>
+                <div class="price">
+                    CHF <?= $fields['prix'] ?> .-
+                </div>
+            </div>
+            
         </div>
         <div class="contact">
             Contact
-            monicon <?php var_dump($fields['image_1']); ?>
-            CHF <?= $fields['prix'] ?> .-
+             
     
         </div>
-        <div class="features">
+        
+
+    </div>
+    <div class="features">
             <?php foreach(get_the_terms($post_id, 'features') as $feature): ?>
                 <div class="feature">
                     <?= $feature->name ?>
                 </div>
 
             <?php endforeach; ?>
-        </div>
-
     </div>
 </div>
 
@@ -52,4 +80,5 @@ $terms = get_terms('bien-type', $post_id);
         <h1>dssss</h1>
         <div class="taxo">
             <?php var_dump(get_the_terms($post_id, 'bien-type')); ?>
+            monicon <?php var_dump($fields['image_1']); ?>
         </div>
