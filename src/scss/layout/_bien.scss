@@ -1,0 +1,85 @@
+.single-bien{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 80px 30px;
+
+    .img{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .gallery{
+        display: flex;
+        gap: 40px;
+        flex: 1;
+        .mainImg{
+            flex: 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .imgs{
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            .img{
+                aspect-ratio: 16/9;
+            }
+        }
+    }
+    .content {
+        flex: 1;
+        display: flex;
+        gap: 40px;
+        .infos {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .bien-types {
+                display: flex;
+
+                .feature {
+                    color: red;
+                    font-weight: bold;  
+                }
+            }
+            .ville {
+                font-weight: bold;
+                font-size: 50px;
+            }
+            .composants{
+                flex: 1;
+                display: flex;
+                gap: 40px;
+                .propriete{
+                    flex: 4;
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .price{
+                    flex: 1;
+                    display: flex;
+                    justify-content: flex-end;
+                    font-weight: bold;
+                }
+            }
+            .title .body h1{
+                font-weight: normal;
+                font-size: 30px;
+            }
+        }
+        .contact {
+            flex: 2;
+            display: flex;
+        }
+    }
+}
