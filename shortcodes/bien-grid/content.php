@@ -61,16 +61,19 @@ defined('WPINC') || wp_die();
 
                 </div>
                 <div class="content">
-                    <div class="title"><?= get_the_title($itemId) ?></div>
-                    <div class="description">
-                        <?= get_the_excerpt($itemId); ?>
-                    </div>
                     <div class="types">
                         <?php foreach ($itemTerms as $term): ?>
                             <div class="type">
                                 <?= $term->name ?>
                             </div>
                         <?php endforeach; ?>
+                    </div>
+                    <div class="title"><?= get_the_title($itemId) ?></div>
+                    <div class="description">
+                        <?= get_the_excerpt($itemId); ?>
+                    </div>
+                    <div class="price">
+                        <?= get_field('prix', $itemId); ?>
                     </div>
                 </div>
             </a>
