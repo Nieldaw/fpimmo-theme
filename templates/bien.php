@@ -26,7 +26,6 @@ $terms = get_terms('bien-type', $post_id);
                     <div class="feature">
                         <?= $feature->name ?>
                     </div>
-
                 <?php endforeach; ?>
             </div>
             <div class="ville">
@@ -40,19 +39,19 @@ $terms = get_terms('bien-type', $post_id);
             </div>
             <div class="composants">
                 <div class="propriete">
-                    <div class="prop prop1">
-                        <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/surface.png" alt="" />
+                    <div class="prop">
+                        <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/room.png" alt="" />
                         <div class="value">
                             <?= $fields['pieces'] ?> pièces
                         </div>
                     </div>
-                    <div class="prop prop2">
-                        <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/surface.png" alt="" />
+                    <div class="prop">
+                        <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/bedroom.png" alt="" />
                         <div class="value">
                             <?= $fields['chambres'] ?> chambre
                         </div>
                     </div>
-                    <div class="prop prop3">
+                    <div class="prop">
                         <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/surface.png" alt="" />
                         <div class="value">
                             <?= $fields['surface'] ?> m2
@@ -63,19 +62,104 @@ $terms = get_terms('bien-type', $post_id);
                     CHF <?= $fields['prix'] ?> .-
                 </div>
             </div>
+            <div class="features"> 
+                CARACTERISTIQUES PRINCIPALES
+                <div class="colonnes">
+                    <div class="colonne">
+                        <div class="infos">
+                            Type :
+                            <div class="info">
+                                <?= $feature->name ?>
+                            </div>
+                        </div>
+                        <div class="infos">
+                            Chambre(s)
+                            <div class="info">
+                                <?= $fields['chambres'] ?>
+                            </div>
+                        </div>
+                        <div class="infos">
+                            Terrasse (s)
+                            <div class="info">
+                                <?= $feature->name ?>
+                            </div>
+                        </div>
+                        <div class="infos">
+                            Surface pondérée
+                            <div class="info">
+                                <?= $feature->name ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colonne">
+                        <div class="infos">
+                            Prix de vente :
+                            <div class="info">
+                                CHF <?= $fields['prix'] ?> .-
+                            </div>
+                        </div>
+                        <div class="infos">
+                            Salle de bain(s):
+                            <div class="info">
+                                <?= $feature->name ?>
+                            </div>
+                        </div>
+                        <div class="infos">
+                            Surface habitable :
+                            <div class="info">
+                                <?= $feature->name ?>
+                            </div>
+                        </div>
+                        <div class="infos">
+                            Disponibilité :
+                            <div class="info">
+                                <?= $fields['prix'] ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colonne">
+                        <div class="infos">
+                            Type :
+                            <div class="info">
+                                <?= $feature->name ?>
+                            </div>
+                        </div>
+                        <div class="infos">
+                            Chambre(s)
+                            <div class="info">
+                                <?= $fields['chambres'] ?>
+                            </div>
+                        </div>
+                        <div class="infos">
+                            Terrasse (s)
+                            <div class="info">
+                                <?= $feature->name ?>
+                            </div>
+                        </div>
+                        <div class="infos">
+                            Surface pondérée
+                            <div class="info">
+                                <?= $feature->name ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="caracteristiques"> 
+                CARACTERISTIQUES
+                <div class="caracteristique">
+                    <?php foreach(get_the_terms($post_id, 'features') as $feature): ?>
+                        <div class="feature">
+                            <?= $feature->name ?>
+                        </div>
+                    <?php endforeach; ?>
+                </div> 
+            </div>
         </div>
         <div class="contact">
             Contact
-
             <?= do_shortcode('[contact-form-7 id="1a4f0dc" title="Formulaire de contact 1"]'); ?>
         </div>
 
-    </div>
-    <div class="features"> 
-        <?php foreach(get_the_terms($post_id, 'features') as $feature): ?>
-            <div class="feature">
-                <?= $feature->name ?>
-            </div>
-        <?php endforeach; ?>
     </div>
 </div>

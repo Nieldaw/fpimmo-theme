@@ -29,28 +29,10 @@ defined('WPINC') || wp_die();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="wrapper" style="grid-template-columns: repeat(<?= $atts["bien-grid_item_by_row"] ?>, 1fr);">
         <?php foreach ($items as $itemId):
             $itemTerms = get_the_terms($itemId, 'bien-type');
-
-            
+   
             $itemTermsString = ";";
             foreach ($itemTerms as $term) {
                 $itemTermsString .= $term->term_id . ';';
@@ -68,31 +50,36 @@ defined('WPINC') || wp_die();
                             </div>
                         <?php endforeach; ?>
                     </div>
-                    <div class="title"><?= get_the_title($itemId) ?></div>
-                    <div class="description">
-                        <?= get_the_excerpt($itemId); ?>
+                    <div class="ville">
+                        <?= get_field('city', $itemId); ?>
                     </div>
                     <div class="price">
-                        <?= get_field('prix', $itemId); ?>
+                        CHF <?= get_field('prix', $itemId); ?> .-
                     </div>
+                    <div class="props">
+                        <div class="prop">
+                            <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/room.png" alt="" />
+                            <div class="value">
+                                <?= get_field('pieces', $itemId); ?> pièces
+                            </div>
+                        </div>
+                        <div class="prop">
+                            <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/bedroom.png" alt="" />
+                            <div class="value">
+                                <?= get_field('chambres', $itemId); ?> chambre(s)
+                            </div>
+                        </div>
+                        <div class="prop">
+                            <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/surface.png" alt="" />
+                            <div class="value">
+                                <?= get_field('surface', $itemId); ?> m2
+                            </div>
+                        </div>
+                    </div>                    
                 </div>
             </a>
         <?php endforeach; ?>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
