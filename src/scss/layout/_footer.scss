@@ -1,0 +1,10 @@
+.socialText {
+  @media screen and (max-width: 576px) {
+    margin-bottom: 0px !important;
+  }
+}
+.centerText576 * {
+  @media screen and (max-width: 576px) {
+    text-align: center !important;
+  }
+}

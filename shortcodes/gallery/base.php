@@ -8,10 +8,10 @@ $block_name = basename(__DIR__);
 
 //query
 $result = get_field('galerie', get_the_id());
-// echo '<pre>';
-// var_dump($result);
-// echo '</pre>';
-// exit;
+//echo '<pre>';
+//var_dump($result);
+//echo '</pre>';
+//exit;
 
 
 set_query_var('items', $result);

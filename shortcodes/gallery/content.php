@@ -6,7 +6,7 @@ defined('WPINC') || wp_die();
 
 ?>
 <div class="bien-gallery">
-    <div class="wrapper" style="grid-template-columns: repeat(<?= $atts["bien-grid_item_by_row"] ?>, 1fr);">
+    <div class="wrapper" style="grid-template-columns: 3, 1fr);">
         <?php foreach ($items as $item):?>
             <div class="item">
                 <div class="img" style="background-image: url('<?= $item['url'] ?>')">

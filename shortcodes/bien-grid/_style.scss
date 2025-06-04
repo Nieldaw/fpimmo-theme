@@ -70,6 +70,8 @@
             font-size: 14px;
             text-transform: uppercase;
           }
+
+
         }
       }
       .content {
@@ -79,6 +81,7 @@
         flex-direction: column;
         justify-content: space-between;
         gap: 0px;
+        
         .date {
           text-align: center;
           color: #039f7f;
@@ -139,6 +142,10 @@
               flex: 1;
               font-size: 15px;
             }
+          }
+          @media screen and (max-width: 576px) {
+            flex-direction: column;
+
           }
         }
         

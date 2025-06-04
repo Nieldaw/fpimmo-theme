@@ -1,7 +1,7 @@
 @import './base/reset';
 
 //layouts
-@import './layout/bien';
+@import './layout/bien', "./layout/footer";
 
 //shortcodes
 @import '../../shortcodes/bien-grid/style', '../../shortcodes/gallery/style';
