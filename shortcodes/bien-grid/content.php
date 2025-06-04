@@ -40,7 +40,10 @@ defined('WPINC') || wp_die();
             ?>
             <a class="item" href="<?= get_the_permalink($itemId); ?>" data-title="<?= strtolower(get_the_title($itemId)) ?>" data-type="<?= $itemTermsString ?>">
                 <div class="img" style="background-image: url('<?= get_the_post_thumbnail_url($itemId) ?>')">
-
+                    <div class="vente">
+                        <?= get_field('types_de_vente', $itemId); ?>
+                        
+                    </div>
                 </div>
                 <div class="content">
                     <div class="types">
@@ -72,7 +75,7 @@ defined('WPINC') || wp_die();
                         <div class="prop">
                             <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/surface.png" alt="" />
                             <div class="value">
-                                <?= get_field('surface', $itemId); ?> m2
+                                <?= get_field('surface_habitable', $itemId); ?> m2
                             </div>
                         </div>
                     </div>                    
