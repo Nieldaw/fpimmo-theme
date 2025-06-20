@@ -70,8 +70,6 @@
             font-size: 14px;
             text-transform: uppercase;
           }
-
-
         }
       }
       .content {
@@ -81,7 +79,7 @@
         flex-direction: column;
         justify-content: space-between;
         gap: 0px;
-        
+
         .date {
           text-align: center;
           color: #039f7f;
@@ -114,41 +112,38 @@
             text-transform: uppercase;
           }
         }
-        .ville{
+        .ville {
           font-weight: bold;
           font-size: 25px;
           padding-top: 3px;
         }
-        .price{
-
+        .price {
         }
-        .props{
+        .props {
           display: flex;
           justify-content: space-between;
           padding-top: 10px;
 
-          .prop{
+          .prop {
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 8px;
             height: min-content;
-            img{
+            img {
               width: 22px;
               height: 22px;
               margin: 0px;
             }
-            .value{
+            .value {
               flex: 1;
               font-size: 15px;
             }
           }
           @media screen and (max-width: 576px) {
             flex-direction: column;
-
           }
         }
-        
       }
       &:hover {
       }

@@ -63,7 +63,7 @@ $terms = get_terms('bien-type', $post_id);
                 </div>
             </div>
             <div class="features"> 
-                <h2>CARACTERISTIQUES PRINCIPALES</h2>
+                <h2>CARACTERISTIQUES</h2>
                 <div class="featuresWrapper">
                     <div class="feature">
                         Type :
@@ -199,16 +199,6 @@ $terms = get_terms('bien-type', $post_id);
                         </div>
                     </div>
                 </div> -->
-            </div>
-            <div class="caracteristiques"> 
-                CARACTERISTIQUES
-                <div class="caracteristique">
-                    <?php foreach(get_the_terms($post_id, 'features') as $feature): ?>
-                        <div class="feature">
-                            <?= $feature->name ?>
-                        </div>
-                    <?php endforeach; ?>
-                </div> 
             </div>
             <div>
                 <?= do_shortcode('[gallery ]'); ?>

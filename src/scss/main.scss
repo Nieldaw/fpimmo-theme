@@ -1,7 +1,7 @@
-@import './base/reset';
+@import "./base/reset";
 
 //layouts
-@import './layout/bien', "./layout/footer";
+@import "./layout/bien", "./layout/footer", "./layout/wordpress";
 
 //shortcodes
-@import '../../shortcodes/bien-grid/style', '../../shortcodes/gallery/style';
+@import "../../shortcodes/bien-grid/style", "../../shortcodes/gallery/style";
