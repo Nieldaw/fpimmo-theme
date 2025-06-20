@@ -12,11 +12,15 @@ $terms = get_terms('bien-type', $post_id);
 <div class="single-bien-style">
     <div class="gallery">
         <div class="mainImg">
-            <div class="img" style="background-image: url('<?= get_the_post_thumbnail_url($post_id); ?>');"></div>
+            <a class="img" href="<?= get_the_post_thumbnail_url($post_id); ?>" style="background-image: url('<?= get_the_post_thumbnail_url($post_id); ?>');"></a>
         </div>
         <div class="imgs">
-            <div class="img" style="background-image: url('<?= get_field('image_1', $post_id)['url']; ?>');"></div>
-            <div class="img" style="background-image: url('<?= get_field('image_2', $post_id)['url']; ?>');"></div>
+            <a class="img" href="<?= get_field('image_1', $post_id)['url']; ?>" style="background-image: url('<?= get_field('image_1', $post_id)['url']; ?>');"></a>
+            <a class="img" href="<?= get_field('image_2', $post_id)['url']; ?>" style="background-image: url('<?= get_field('image_2', $post_id)['url']; ?>');"></a>
+
+            <?php foreach(get_field('galerie', $post_id) as $image): ?>
+                <a class="img" href="<?= $image['url']; ?>" style="background-image: url('<?= $image['url']; ?>');"></a>
+            <?php endforeach; ?>
         </div>
     </div>
     <div class="content">
@@ -42,19 +46,25 @@ $terms = get_terms('bien-type', $post_id);
                     <div class="prop">
                         <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/room.png" alt="" />
                         <div class="value">
-                            <?= $fields['pieces'] ?> pièces
+                            <?= if(isset($fields['pieces'])): ?>
+                                <?= $fields['pieces'] ?> pièces
+                            <? endif; ?>
                         </div>
                     </div>
                     <div class="prop">
                         <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/bedroom.png" alt="" />
                         <div class="value">
-                            <?= $fields['chambres'] ?> chambre
+                            <?= if(isset($fields['chambres'])): ?>
+                                <?= $fields['chambres'] ?> chambre
+                            <? endif; ?>
                         </div>
                     </div>
                     <div class="prop">
                         <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/surface.png" alt="" />
                         <div class="value">
-                            <?= $fields['surface_habitable'] ?> m2
+                            <?= if(isset($fields['surface_habitable'])): ?>
+                                <?= $fields['surface_habitable'] ?> m²
+                            <? endif; ?>
                         </div>
                     </div>  
                 </div>
@@ -75,7 +85,7 @@ $terms = get_terms('bien-type', $post_id);
                         <div class="feature">
                             Surface habitable
                             <div class="value">
-                                <?= $fields['surface_habitable'] ?>m2
+                                <?= $fields['surface_habitable'] ?> m²
                             </div>
                         </div>
                     <?php endif; ?>
@@ -112,93 +122,31 @@ $terms = get_terms('bien-type', $post_id);
                             </div>
                         </div>
                     <?php endif; ?>
-    
-                    <div class="feature">a</div>
-                    <div class="feature">a</div>
+                    <?php if(isset($fields['surface_du_terrain']) && $fields['surface_du_terrain'] != "") : ?>
+                        <div class="feature">
+                            Surface du terrain
+                            <div class="value">
+                                <?= $fields['surface_du_terrain'] ?> m²
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                    <?php if(isset($fields['etages']) && $fields['etages'] != "") : ?>
+                        <div class="feature">
+                            Nombre d'étages
+                            <div class="value">
+                                <?= $fields['etages'] ?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                    <?php if(isset($fields['derniere_renovation']) && $fields['derniere_renovation'] != "") : ?>
+                        <div class="feature">
+                            Dernière rénovation
+                            <div class="value">
+                                <?= $fields['derniere_renovation'] ?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
                 </div>
-                <!-- CARACTERISTIQUES PRINCIPALES
-                <div class="colonnes">
-                    <div class="colonne">
-                        <div class="infos">
-                            Type :
-                            <div class="info">
-                                <?= $feature->name ?>
-                            </div>
-                        </div>
-                        <div class="infos">
-                            Chambre(s)
-                            <div class="info">
-                                <?= $fields['chambres'] ?>
-                            </div>
-                        </div>
-                        <div class="infos">
-                            Terrasse (s)
-                            <div class="info">
-                                <?= $feature->name ?>
-                            </div>
-                        </div>
-                        <div class="infos">
-                            Surface pondérée
-                            <div class="info">
-                                <?= $feature->name ?>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="colonne">
-                        <div class="infos">
-                            Prix de vente :
-                            <div class="info">
-                                CHF <?= $fields['prix'] ?> .-
-                            </div>
-                        </div>
-                        <div class="infos">
-                            Salle de bain(s):
-                            <div class="info">
-                                <?= $feature->name ?>
-                            </div>
-                        </div>
-                        <div class="infos">
-                            Surface habitable :
-                            <div class="info">
-                                <?= $feature->name ?>
-                            </div>
-                        </div>
-                        <div class="infos">
-                            Disponibilité :
-                            <div class="info">
-                                <?= $fields['prix'] ?>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="colonne">
-                        <?php if($feature->name): ?>
-                            <div class="infos">
-                            Type :
-                            <div class="info">
-                                <?= $feature->name ?>
-                            </div>
-                            </div>
-                        <?php endif; ?>
-                        <div class="infos">
-                            Chambre(s)
-                            <div class="info">
-                                <?= $fields['chambres'] ?>
-                            </div>
-                        </div>
-                        <div class="infos">
-                            Terrasse (s)
-                            <div class="info">
-                                <?= $feature->name ?>
-                            </div>
-                        </div>
-                        <div class="infos">
-                            Surface pondérée
-                            <div class="info">
-                                <?= $feature->name ?>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
             <div>
                 <?= do_shortcode('[gallery ]'); ?>
@@ -210,3 +158,22 @@ $terms = get_terms('bien-type', $post_id);
 
     </div>
 </div>
+<style>
+.single-bien-style > .gallery > .imgs .img:nth-child(n+3) {
+    display: none;
+}
+/* .mfp-container button {
+    display: none!important;
+} */
+</style>
+<script>
+   jQuery(document).ready(function ($) {
+        $('.gallery').magnificPopup({
+            type: 'image',
+            delegate: 'a',
+            gallery: {
+                enabled: true
+            },
+        });
+    });
+</script>
