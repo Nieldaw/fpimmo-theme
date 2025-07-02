@@ -46,25 +46,25 @@ $terms = get_terms('bien-type', $post_id);
                     <div class="prop">
                         <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/room.png" alt="" />
                         <div class="value">
-                            <?= if(isset($fields['pieces'])): ?>
+                            <?php if(isset($fields['pieces'])): ?>
                                 <?= $fields['pieces'] ?> pièces
-                            <? endif; ?>
+                            <?php endif; ?>
                         </div>
                     </div>
                     <div class="prop">
                         <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/bedroom.png" alt="" />
                         <div class="value">
-                            <?= if(isset($fields['chambres'])): ?>
+                            <?php if(isset($fields['chambres'])): ?>
                                 <?= $fields['chambres'] ?> chambre
-                            <? endif; ?>
+                            <?php endif; ?>
                         </div>
                     </div>
                     <div class="prop">
                         <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/surface.png" alt="" />
                         <div class="value">
-                            <?= if(isset($fields['surface_habitable'])): ?>
+                            <?php if(isset($fields['surface_habitable'])): ?>
                                 <?= $fields['surface_habitable'] ?> m²
-                            <? endif; ?>
+                            <?php endif; ?>
                         </div>
                     </div>  
                 </div>
