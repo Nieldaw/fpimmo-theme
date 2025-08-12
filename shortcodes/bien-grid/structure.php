@@ -16,12 +16,13 @@ if (defined('WPB_VC_VERSION') && (is_admin() || filter_input(INPUT_GET, 'vc_edit
                 'hide_empty' => false,
             )
         );
-        $bienTypesValue = [__('Toutes', 'app') => "-1"];
+            
+        $bienTypesValue = [__('Toutes', 'app') => '-1'];
         foreach ($bienTypes as $cat) {
             $bienTypesValue[$cat->name] = $cat->term_id;
         }
 
-        $eventExcludeCategoriesValue = [__('Aucune', 'app') => "-1"];
+        $eventExcludeCategoriesValue = [__('Aucune', 'app') => '-1'];
         foreach ($bienTypes as $cat) {
             $eventExcludeCategoriesValue[$cat->name] = $cat->term_id;
         }

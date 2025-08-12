@@ -36,11 +36,11 @@
       flex-direction: column;
       position: relative;
       background-color: white;
-      box-shadow: 3px 4px 20px 6px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 0px 1px 2px rgba(189, 135, 37, 0.9);
 
       .vente {
         background-color: white;
-        color: #f9b319;
+        color: #bd8725;
         font-weight: bold;
         display: inline-block;
         position: absolute;
@@ -106,7 +106,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #f9b319;
+            color: #bd8725;
             font-weight: bold;
             font-size: 16px;
             text-transform: uppercase;
@@ -154,6 +154,12 @@
     }
     @media screen and (max-width: 576px) {
       grid-template-columns: 1fr !important;
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
+    @media screen and (max-width: 396px) {
+      padding-top: 136px;
+      padding-bottom: 136px;
     }
   }
   .empty {
