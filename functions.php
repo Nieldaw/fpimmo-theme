@@ -21,4 +21,9 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('child-js', get_stylesheet_directory_uri() . '/dist/js/main.js', ['jquery'], '1.0.0');
 }, 100);
 
-
+function fpimmo_scripts() {
+  // ... vos scripts existants
+  
+  wp_enqueue_script('mobile-menu', get_template_directory_uri() . '/js/mobile-menu.js', array(), '1.0.0', true);
+}
+add_action('wp_enqueue_scripts', 'fpimmo_scripts');

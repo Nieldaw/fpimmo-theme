@@ -68,44 +68,59 @@
         color: #002a62;
       }
 
-      .composants {
-        flex: 1;
+      .desktop-order {
         display: flex;
-        gap: 40px;
-        color: #000000;
-        .propriete {
-          flex: 3;
+        flex-direction: column;
+        .composants {
+          flex: 1;
           display: flex;
-          justify-content: space-between;
-          gap: 20px;
-          .prop {
+          gap: 40px;
+          color: #000000;
+          .propriete {
+            flex: 3;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            height: min-content;
-            img {
-              width: 30px;
-              height: 30px;
+            justify-content: space-between;
+            gap: 20px;
+            .prop {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 8px;
+              height: min-content;
+              img {
+                width: 30px;
+                height: 30px;
+              }
+              .value {
+                flex: 1;
+              }
             }
-            .value {
-              flex: 1;
+          }
+          .price {
+            flex: 2;
+            display: flex;
+            justify-content: flex-end;
+            font-weight: bold;
+          }
+          @media screen and (max-width: 576px) {
+            flex-direction: column;
+            gap: 15px;
+
+            .price {
+              justify-content: flex-start;
+              font-size: 28px;
             }
           }
         }
-        .price {
-          flex: 2;
-          display: flex;
-          justify-content: flex-end;
-          font-weight: bold;
-        }
         @media screen and (max-width: 576px) {
-          flex-direction: column;
-          gap: 15px;
-
-          .price {
-            justify-content: flex-start;
-            font-size: 28px;
+          .desktop-order {
+            flex-direction: column-reverse;
+          }
+          .description {
+            order: 2;
+          }
+          .composants {
+            order: 1;
           }
         }
       }
@@ -146,6 +161,13 @@
         display: flex;
         flex-direction: column;
         font-weight: bold;
+      }
+
+      @media screen and (max-width: 576px) {
+        .composants {
+        }
+        h3 {
+        }
       }
     }
     .contact {

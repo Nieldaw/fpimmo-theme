@@ -4,6 +4,19 @@ html {
   padding: 0px;
 }
 
+p {
+  line-height: 30px;
+}
+
+#header-outer {
+  box-shadow: 0 3px 45px rgba(0, 0, 0, 0.15) !important;
+}
+
+@media screen and (max-width: 576px) {
+  header {
+  }
+}
+
 @media screen and (max-width: 576px) {
   h4 {
     font-size: 20px;

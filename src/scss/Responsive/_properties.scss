@@ -1,0 +1,46 @@
+@import "breakpoints";
+
+// Grille de propriétés responsive
+.properties-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  @include respond-to(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include respond-to(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.property-card {
+  margin-bottom: 2rem;
+
+  @include mobile-only {
+    margin-bottom: 1.5rem;
+  }
+
+  &-image {
+    width: 100%;
+    height: auto;
+
+    @include mobile-only {
+      max-height: 250px;
+      object-fit: cover;
+    }
+  }
+
+  &-title {
+    font-size: 1.2rem;
+
+    @include mobile-only {
+      font-size: 1.1rem;
+    }
+  }
+}

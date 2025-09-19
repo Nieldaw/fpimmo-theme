@@ -1,13 +1,16 @@
+// Texte pour les icones des réseaux sociaux
 .socialText {
   @media screen and (max-width: 576px) {
     margin-bottom: 0px !important;
   }
 }
+// Alignement du textes
 .centerText576 * {
   @media screen and (max-width: 576px) {
     text-align: center !important;
   }
 }
+// ???
 .button-submit {
   padding: 15px 22px !important;
   display: flex;

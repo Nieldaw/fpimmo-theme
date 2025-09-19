@@ -35,41 +35,45 @@ $terms = get_terms('bien-type', $post_id);
             <div class="ville">
                 <?= $fields['city'] ?>
             </div>
-            <div class="title">
-                <h3><?= get_the_title($post_id); ?></h3>
-                <div class="description">
-                    <?= get_the_content($post_id); ?>
+            <div class= "structure">
+                <div class="title">
+                    <h3><?= get_the_title($post_id); ?></h3>
                 </div>
-            </div>
-            <div class="composants">
-                <div class="propriete">
-                    <div class="prop">
-                        <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/room.png" alt="" />
-                        <div class="value">
-                            <?php if(isset($fields['pieces'])): ?>
-                                <?= $fields['pieces'] ?> pièces
-                            <?php endif; ?>
+                <div class="desktop-order">
+                    <div class="description">
+                        <?= get_the_content($post_id); ?>
+                    </div>
+                    <div class="composants">
+                        <div class="propriete">
+                            <div class="prop">
+                                <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/room.png" alt="" />
+                                <div class="value">
+                                    <?php if(isset($fields['pieces'])): ?>
+                                        <?= $fields['pieces'] ?> pièces
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                            <div class="prop">
+                                <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/bedroom.png" alt="" />
+                                <div class="value">
+                                    <?php if(isset($fields['chambres'])): ?>
+                                        <?= $fields['chambres'] ?> chambre
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                            <div class="prop">
+                                <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/surface.png" alt="" />
+                                <div class="value">
+                                    <?php if(isset($fields['surface_habitable'])): ?>
+                                        <?= $fields['surface_habitable'] ?> m²
+                                    <?php endif; ?>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="price">
+                            CHF <?= $fields['prix'] ?> .-
                         </div>
                     </div>
-                    <div class="prop">
-                        <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/bedroom.png" alt="" />
-                        <div class="value">
-                            <?php if(isset($fields['chambres'])): ?>
-                                <?= $fields['chambres'] ?> chambre
-                            <?php endif; ?>
-                        </div>
-                    </div>
-                    <div class="prop">
-                        <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/surface.png" alt="" />
-                        <div class="value">
-                            <?php if(isset($fields['surface_habitable'])): ?>
-                                <?= $fields['surface_habitable'] ?> m²
-                            <?php endif; ?>
-                        </div>
-                    </div>  
-                </div>
-                <div class="price">
-                    CHF <?= $fields['prix'] ?> .-
                 </div>
             </div>
             <div class="features"> 

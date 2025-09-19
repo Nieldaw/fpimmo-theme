@@ -1,7 +1,12 @@
 @import "./base/reset";
 
 //layouts
-@import "./layout/bien", "./layout/footer", "./layout/wordpress";
+@import "./layout/bien", "./layout/footer", "./layout/header",
+  "./layout/wordpress";
 
 //shortcodes
 @import "../../shortcodes/bien-grid/style", "../../shortcodes/gallery/style";
+
+//responsive
+@import "./Responsive/breakpoints", "./Responsive/properties",
+  "./Responsive/search", "./Responsive/typography";

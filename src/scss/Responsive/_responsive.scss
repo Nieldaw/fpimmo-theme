@@ -1,0 +1,33 @@
+// Import des breakpoints
+@import "breakpoints";
+
+// Utilitaires responsive
+.hide-on-mobile {
+  @include mobile-only {
+    display: none !important;
+  }
+}
+
+.show-on-mobile {
+  display: none !important;
+
+  @include mobile-only {
+    display: block !important;
+  }
+}
+
+// Container responsive
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @include respond-to(sm) {
+    padding: 0 1.5rem;
+  }
+
+  @include respond-to(md) {
+    padding: 0 2rem;
+  }
+}
