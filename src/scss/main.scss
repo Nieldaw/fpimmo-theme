@@ -4,7 +4,8 @@
 @import "./layout/bien", "./layout/footer", "./layout/wordpress";
 
 //shortcodes
-@import "../../shortcodes/bien-grid/style", "../../shortcodes/gallery/style";
+@import "../../shortcodes/bien-grid/style", "../../shortcodes/gallery/style",
+  "../../shortcodes/testimonials-slider/style";
 
 //responsive
 @import "./Responsive/breakpoints", "./Responsive/properties",
