@@ -1,5 +1,3 @@
-@import "responsive";
-
 .bien-grid {
   display: flex;
   flex-direction: column;
@@ -158,16 +156,12 @@
     // Mobile M
     @media screen and (max-width: 576px) {
       grid-template-columns: 1fr !important;
-      //margin-top: 150px;
       margin-top: 10px;
-      //margin-bottom: 150px;
       margin-bottom: 0px;
     }
     // Mobile S
     @media screen and (max-width: 396px) {
-      //margin-top: 136px;
       margin-top: 0px;
-      //margin-bottom: 136px;
       margin-bottom: 0px;
     }
   }
