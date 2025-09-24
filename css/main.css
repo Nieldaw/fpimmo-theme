@@ -1,0 +1,95 @@
+.single-bien{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 80px 30px;
+
+}
+.single-bien .gallery{
+    display: flex;
+    gap: 40px;
+    flex: 1;
+}
+.single-bien .img{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.single-bien .gallery .mainImg{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.single-bien .gallery .mainImg .img{
+    flex: 1;
+
+}
+.single-bien .gallery .imgs{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+}
+.single-bien .gallery .imgs .img{
+    aspect-ratio: 16/9;
+}
+
+.single-bien .content {
+    flex: 1;
+    display: flex;
+    gap: 40px;
+
+}
+.single-bien .content .infos {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.single-bien .content .infos .bien-types {
+    display: flex;
+}
+.single-bien .content .infos .bien-types .feature {
+    color: red;
+    font-weight: bold;  
+}
+.single-bien .content .infos .ville {
+    font-weight: bold;
+    font-size: 50px;
+}
+.single-bien .content .infos .composants{
+    flex: 1;
+    display: flex;
+    gap: 40px;
+}
+.single-bien .content .infos .composants .propriete{
+    flex: 4;
+    display: flex;
+    justify-content: space-between;
+}
+.single-bien .content .infos .composants .price{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+}
+.single-bien .content .infos .title .body h1{
+    font-weight: normal;
+    font-size: 30px;
+}
+.single-bien .content .infos .description {
+
+}
+
+.single-bien .content .contact {
+    flex: 2;
+    display: flex;
+}
+

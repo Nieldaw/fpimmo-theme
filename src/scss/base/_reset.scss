@@ -1,7 +1,7 @@
 body,
 html {
-  margin: 0px;
-  padding: 0px;
+  margin: 0px !important;
+  padding: 0px !important;
 }
 
 p {
@@ -12,11 +12,38 @@ p {
   box-shadow: 0 3px 45px rgba(0, 0, 0, 0.15) !important;
 }
 
-@media screen and (max-width: 576px) {
+//Ordi L
+@media screen and (max-width: 1400px) {
   header {
   }
 }
-
+//Ordi M
+@media screen and (max-width: 1200px) {
+  header {
+  }
+}
+//Ordi S
+@media screen and (max-width: 1024px) {
+  header {
+  }
+}
+//Tablette Longueur
+@media screen and (max-width: 992px) {
+  p {
+    font-size: 20px;
+  }
+}
+// Tablette Largeur
+@media screen and (max-width: 768px) {
+  header {
+  }
+}
+// Mobile L
+@media screen and (max-width: 630px) {
+  header {
+  }
+}
+// Mobile M
 @media screen and (max-width: 576px) {
   h4 {
     font-size: 20px;
@@ -25,7 +52,7 @@ p {
     text-align: center;
   }
 }
-
+// Mobile S
 @media screen and (max-width: 405px) {
   h4 {
     font-size: 16px;
