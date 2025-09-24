@@ -1,9 +1,6 @@
 jQuery(document).ready(function ($) {
-
-
-$('.galleryWrapper').magnificPopup({
-    delegate: 'div',
-    type: 'image'
-});
-
+  $(".galleryWrapper").magnificPopup({
+    delegate: "div",
+    type: "image",
+  });
 });
