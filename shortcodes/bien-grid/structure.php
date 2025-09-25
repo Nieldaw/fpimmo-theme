@@ -28,7 +28,7 @@ if (defined('WPB_VC_VERSION') && (is_admin() || filter_input(INPUT_GET, 'vc_edit
         }
 
         vc_map([
-            'name' => __("Event grid", 'vnv'),
+            'name' => __("Bien grid", 'vnv'),
             'category' => __('FPIMMO', 'vnv'),
             'base' => basename(__DIR__),
             'params' => [
