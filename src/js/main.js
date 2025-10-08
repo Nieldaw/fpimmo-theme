@@ -5,7 +5,16 @@ jQuery(document).ready(function ($) {
   });
 
   if ($(".testimonials-slider").length) {
-    $(".flickity-wrapper").flickity({
+    $(".testimonials-flickity-wrapper").flickity({
+      wrapAround: true,
+      autoPlay: true,
+      pageDots: false,
+      cellAlign: "center",
+      adaptiveHeight: true,
+    });
+  }
+  if ($(".biens-slider").length) {
+    $(".biens-flickity-wrapper").flickity({
       wrapAround: true,
       autoPlay: true,
       pageDots: false,

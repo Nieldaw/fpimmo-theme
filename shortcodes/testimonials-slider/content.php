@@ -3,7 +3,7 @@
 defined('WPINC') || wp_die();
 ?>
 <div class="testimonials-slider">
-    <div class="flickity-wrapper">
+    <div class="testimonials-flickity-wrapper">
         <?php foreach ($items as $item) : ?>
             <div class="testimonial-item">
                 <div class="testimonial-wrapper">
