@@ -17,61 +17,61 @@ if (defined('WPB_VC_VERSION') && (is_admin() || filter_input(INPUT_GET, 'vc_edit
             )
         );
             
-        $bienTypesValue = [__('Toutes', 'app') => '-1'];
+        $bienTypesValue = [__('Toutes', 'fpimmo') => '-1'];
         foreach ($bienTypes as $cat) {
             $bienTypesValue[$cat->name] = $cat->term_id;
         }
 
-        $eventExcludeCategoriesValue = [__('Aucune', 'app') => '-1'];
+        $eventExcludeCategoriesValue = [__('Aucune', 'fpimmo') => '-1'];
         foreach ($bienTypes as $cat) {
             $eventExcludeCategoriesValue[$cat->name] = $cat->term_id;
         }
 
         vc_map([
-            'name' => __("Event grid", 'vnv'),
-            'category' => __('FPIMMO', 'vnv'),
+            'name' => __("Event grid", 'fpimmo'),
+            'category' => __('FPIMMO', 'fpimmo'),
             'base' => basename(__DIR__),
             'params' => [
                 [
                     'param_name' => basename(__DIR__) . '_type',
-                    'group' => __('Main informations', 'vnv'),
-                    'heading' => __('Types', 'app'),
+                    'group' => __('Main informations', 'fpimmo'),
+                    'heading' => __('Types', 'fpimmo'),
                     'type' => 'dropdown_multi',
                     'value' => $bienTypesValue,
                 ],
                 [
                     'param_name' => basename(__DIR__) . '_type_exclude',
-                    'group' => __('Main informations', 'vnv'),
-                    'heading' => __('Exclude type', 'app'),
+                    'group' => __('Main informations', 'fpimmo'),
+                    'heading' => __('Exclude type', 'fpimmo'),
                     'type' => 'dropdown_multi',
                     'value' => $eventExcludeCategoriesValue,
                 ],
                 [
                     'param_name' => basename(__DIR__) . '_limit',
-                    'group' => __('Main informations', 'vnv'),
-                    'heading' => __('Max', 'app'),
+                    'group' => __('Main informations', 'fpimmo'),
+                    'heading' => __('Max', 'fpimmo'),
                     'description' => __('Use -1 for no limitation'),
                     'type' => 'textfield',
                     'value' => -1,
                 ],
                 [
                     'param_name' => basename(__DIR__) . '_item_by_row',
-                    'group' => __('Main informations', 'vnv'),
-                    'heading' => __('Item by row', 'app'),
+                    'group' => __('Main informations', 'fpimmo'),
+                    'heading' => __('Item by row', 'fpimmo'),
                     'type' => 'textfield',
                     'value' => 3,
                 ],
                 [
                     'param_name' => basename(__DIR__) . '_enable_search',
-                    'group' => __('Search', 'vnv'),
-                    'heading' => __('Enable search ?', 'app'),
+                    'group' => __('Search', 'fpimmo'),
+                    'heading' => __('Enable search ?', 'fpimmo'),
                     'type' => 'checkbox',
                     'value' => true,
                 ],
                 [
                     'param_name' => basename(__DIR__) . '_enable_search_text',
-                    'group' => __('Search', 'vnv'),
-                    'heading' => __('By text', 'app'),
+                    'group' => __('Search', 'fpimmo'),
+                    'heading' => __('By text', 'fpimmo'),
                     'type' => 'checkbox',
                     'value' => false,
                     "dependency" => array(
@@ -81,8 +81,8 @@ if (defined('WPB_VC_VERSION') && (is_admin() || filter_input(INPUT_GET, 'vc_edit
                 ],
                 [
                     'param_name' => basename(__DIR__) . '_enable_search_type',
-                    'group' => __('Search', 'vnv'),
-                    'heading' => __('By type', 'app'),
+                    'group' => __('Search', 'fpimmo'),
+                    'heading' => __('By type', 'fpimmo'),
                     'type' => 'checkbox',
                     'value' => false,
                     "dependency" => array(

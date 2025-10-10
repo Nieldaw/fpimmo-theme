@@ -6,7 +6,7 @@ defined('WPINC') || wp_die();
 $block_name = basename(__DIR__);
 
 $query_args = [
-    // 'fields' => 'ids',
+    'fields' => 'ids',
     'post_type' => 'bien',
     'post_status' => 'publish',
     'public' => true,

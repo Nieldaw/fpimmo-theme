@@ -59,7 +59,7 @@ defined('WPINC') || wp_die();
                     <div class="price">
                         CHF <?= get_field('prix', $itemId); ?> .-
                     </div>
-                    <div class="props">
+                    <div class="props1">
                         <div class="prop">
                             <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/room.png" alt="" />
                             <div class="value">
@@ -72,6 +72,8 @@ defined('WPINC') || wp_die();
                                 <?= get_field('chambres', $itemId); ?> chambre(s)
                             </div>
                         </div>
+                    </div>
+                    <div class="props2">
                         <div class="prop">
                             <img src="https://wp.fpimmo.ch/wp-content/uploads/2025/02/surface.png" alt="" />
                             <div class="value">

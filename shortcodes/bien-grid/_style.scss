@@ -51,7 +51,7 @@
         padding-right: 12px;
       }
       .img {
-        aspect-ratio: 16/11;
+        aspect-ratio: 16/9;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -121,7 +121,7 @@
         }
         .price {
         }
-        .props {
+        .props1 {
           display: flex;
           justify-content: space-between;
           padding-top: 10px;
@@ -140,6 +140,7 @@
             .value {
               flex: 1;
               font-size: 15px;
+              line-height: normal;
             }
           }
           @media screen and (max-width: 1300px) {
@@ -149,7 +150,42 @@
             flex-direction: row;
           }
           @media screen and (max-width: 850px) {
+            //flex-direction: column;
+          }
+          @media screen and (max-width: 576px) {
+            //flex-direction: column;
+          }
+        }
+        .props2 {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 10px;
+
+          .prop {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            height: min-content;
+            img {
+              width: 22px;
+              height: 22px;
+              margin: 0px;
+            }
+            .value {
+              flex: 1;
+              font-size: 15px;
+              line-height: normal;
+            }
+          }
+          @media screen and (max-width: 1300px) {
             flex-direction: column;
+          }
+          @media screen and (max-width: 998px) {
+            flex-direction: row;
+          }
+          @media screen and (max-width: 850px) {
+            //flex-direction: column;
           }
           @media screen and (max-width: 576px) {
             //flex-direction: column;
@@ -165,14 +201,12 @@
     }
     // Mobile M
     @media screen and (max-width: 576px) {
-      grid-template-columns: 1fr !important;
-      margin: 0px 25px;
-      padding-top: 0px;
     }
     // Mobile S
     @media screen and (max-width: 396px) {
-      margin-top: 0px;
-      margin-bottom: 0px;
+      grid-template-columns: 1fr !important;
+      margin: 0px 25px;
+      padding-top: 0px;
     }
   }
   .empty {

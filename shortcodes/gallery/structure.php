@@ -16,19 +16,19 @@ if (defined('WPB_VC_VERSION') && (is_admin() || filter_input(INPUT_GET, 'vc_edit
                 'hide_empty' => false,
             )
         );
-        $bienTypesValue = [__('Toutes', 'app') => "-1"];
+        $bienTypesValue = [__('Toutes', 'fpimmo') => "-1"];
         foreach ($bienTypes as $cat) {
             $bienTypesValue[$cat->name] = $cat->term_id;
         }
 
-        $eventExcludeCategoriesValue = [__('Aucune', 'app') => "-1"];
+        $eventExcludeCategoriesValue = [__('Aucune', 'fpimmo') => "-1"];
         foreach ($bienTypes as $cat) {
             $eventExcludeCategoriesValue[$cat->name] = $cat->term_id;
         }
 
         vc_map([
-            'name' => __("Gallery", 'vnv'),
-            'category' => __('FPIMMO', 'vnv'),
+            'name' => __("Gallery", 'fpimmo'),
+            'category' => __('FPIMMO', 'fpimmo'),
             'base' => basename(__DIR__),
         ]);
     });

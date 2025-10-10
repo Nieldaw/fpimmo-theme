@@ -1,34 +1,168 @@
 .biens-slider {
-  .flickity-wrapper {
-    .bien-item {
+  .biens-flickity-wrapper {
+    .item {
       width: 80%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      background-color: white;
+      box-shadow: 2px 3px 6px 1px rgba(128, 128, 128, 0.75);
 
-      .bien-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 15px;
+      .vente {
+        background-color: white;
+        color: #bd8725;
+        font-weight: bold;
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 4px;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      .img {
+        aspect-ratio: 16/11;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         padding: 20px;
-        margin: 20px;
 
-        background-color: #fff;
-        border: 1px solid #eee;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-        .title {
-          font-size: 1.2em;
-          font-weight: bold;
-          color: #333;
-        }
-        .score {
+        .organizers {
           display: flex;
-          gap: 5px;
+          gap: 10px;
+
+          .organizer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 15px 0px 15px;
+            background-color: #039f7f;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+          }
         }
       }
-      @media screen and (max-width: 999px) {
-        width: 100%;
+      .content {
+        padding: 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0px;
+
+        .date {
+          text-align: center;
+          color: #039f7f;
+          font-size: 14px;
+        }
+        .title {
+          text-align: center;
+          font-size: 20px;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: #000;
+        }
+        .description {
+          text-align: center;
+          color: #000;
+          padding: 20px 0px 20px 0px;
+        }
+
+        .types {
+          display: flex;
+          gap: 10px;
+
+          .type {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #bd8725;
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: uppercase;
+          }
+        }
+        .ville {
+          font-weight: bold;
+          font-size: 25px;
+          padding-top: 3px;
+        }
+        .price {
+        }
+        .props1 {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 10px;
+
+          .prop {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            height: min-content;
+            img {
+              width: 22px;
+              height: 22px;
+              margin: 0px;
+            }
+            .value {
+              flex: 1;
+              font-size: 15px;
+              line-height: normal;
+            }
+          }
+          @media screen and (max-width: 1300px) {
+            flex-direction: column;
+          }
+          @media screen and (max-width: 998px) {
+            flex-direction: row;
+          }
+          @media screen and (max-width: 850px) {
+            //flex-direction: column;
+          }
+          @media screen and (max-width: 576px) {
+            //flex-direction: column;
+          }
+        }
+        .props2 {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 10px;
+
+          .prop {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            height: min-content;
+            img {
+              width: 22px;
+              height: 22px;
+              margin: 0px;
+            }
+            .value {
+              flex: 1;
+              font-size: 15px;
+              line-height: normal;
+            }
+          }
+          @media screen and (max-width: 1300px) {
+            flex-direction: column;
+          }
+          @media screen and (max-width: 998px) {
+            flex-direction: row;
+          }
+          @media screen and (max-width: 850px) {
+            //flex-direction: column;
+          }
+          @media screen and (max-width: 576px) {
+            //flex-direction: column;
+          }
+        }
+      }
+      &:hover {
       }
     }
   }

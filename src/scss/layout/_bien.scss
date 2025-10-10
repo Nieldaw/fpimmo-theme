@@ -17,6 +17,7 @@
     display: flex;
     gap: 40px;
     flex: 1;
+    margin-top: 70px;
     .mainImg {
       flex: 3;
       display: flex;
@@ -34,6 +35,7 @@
     }
     @media screen and (max-width: 576px) {
       gap: 5px;
+      margin-top: 70px;
 
       .imgs {
         gap: 5px;
@@ -53,6 +55,7 @@
       font-family: Cardo, serif;
       .bien-types {
         display: flex;
+        margin-bottom: 15px;
         .feature {
           color: #bd8725;
           font-size: 30px;
@@ -101,6 +104,7 @@
             display: flex;
             justify-content: flex-end;
             font-weight: bold;
+            margin-bottom: 15px;
           }
           @media screen and (max-width: 576px) {
             flex-direction: column;

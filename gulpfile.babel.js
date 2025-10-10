@@ -38,7 +38,7 @@ export const pot = () => {
     .pipe(
       wpPot({
         domain: "app",
-        package: "VNV",
+        package: "fpimmo",
       })
     )
     .pipe(dest(`languages/app.pot`));

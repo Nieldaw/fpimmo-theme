@@ -8,22 +8,22 @@ defined('WPINC') || wp_die();
 if (defined('WPB_VC_VERSION') && (is_admin() || filter_input(INPUT_GET, 'vc_editable') == true)) {
     add_action('vc_before_init', function () {
         vc_map([
-            'name' => __("Biens Slider", 'vnv'),
-            'category' => __('FPIMMO', 'vnv'),
+            'name' => __("Biens Slider", 'fpimmo'),
+            'category' => __('FPIMMO', 'fpimmo'),
             'base' => basename(__DIR__),
             'params' => [
                 [
                     'param_name' => basename(__DIR__) . '_limit',
-                    'group' => __('Main informations', 'vnv'),
-                    'heading' => __('Max', 'app'),
+                    'group' => __('Main informations', 'fpimmo'),
+                    'heading' => __('Max', 'fpimmo'),
                     'description' => __('Use -1 for no limitation'),
                     'type' => 'textfield',
                     'value' => -1,
                 ],
                 [
                     'param_name' => basename(__DIR__) . '_autostart',
-                    'group' => __('Main informations', 'vnv'),
-                    'heading' => __('Autostart', 'app'),
+                    'group' => __('Main informations', 'fpimmo'),
+                    'heading' => __('Autostart', 'fpimmo'),
                     'type' => 'checkbox',
                     'value' => true,
                 ]
